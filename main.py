@@ -15,9 +15,10 @@ def main(page: ft.Page):
     #Color de fondo de la APP
     page.bgcolor = ft.colors.GREY_400
 
-    general_weight= 350
-
-    profiles_containers_height = 150
+    general_weight= 325
+    profiles_containers_height = 190
+    profiles_containers_border = 12
+    profiles_containers_bgcolor = ft.colors.WHITE
 
     def route_change(route):
         page.views.clear()
@@ -53,8 +54,8 @@ def main(page: ft.Page):
                         width=general_weight,
                         alignment=alignment.center,
                         content=
-                        ft.Container(width=90,
-                                height=90,
+                        ft.Container(width=80,
+                                height=80,
                                 gradient=ft.LinearGradient(
                                         begin=ft.alignment.top_center,
                                         end=ft.Alignment(0.8, 1),
@@ -79,24 +80,24 @@ def main(page: ft.Page):
                                         blur_style=ft.ShadowBlurStyle.NORMAL,
                                 ),
                                 #theme= ft.Theme(color_scheme=ft.ColorScheme(primary=ft.colors.GREEN)),
-                                border_radius=20,
+                                border_radius=18,
                                 padding=10,
                                 #border= ft.border.all(1, ft.colors.BLUE),
-                                content=ft.Image(width=35,src="assets/logos/OptigyLogo.png"),
+                                content=ft.Image(width=30,src="assets/logos/OptigyLogo.png"),
                             ),
                     ),
 
                     ft.Container(
                         width=general_weight,
                         #height=500,
-                        margin=5,
+                        margin=1,
                         alignment=alignment.center,                     
                         content= ft.Stack(
                                         [
                                             ft.Text(text_align= ft.TextAlign.CENTER,
                                                 spans=[
                                                     ft.TextSpan("OPTIGY", 
-                                                        ft.TextStyle(font_family="arial", letter_spacing= 10, size=25, weight=ft.FontWeight.W_600,
+                                                        ft.TextStyle(font_family="arial", letter_spacing= 8, size=20, weight=ft.FontWeight.W_600,
                                                             foreground=ft.Paint(
                                                                 color=ft.colors.BLACK,
                                                                 stroke_width=4,
@@ -110,7 +111,7 @@ def main(page: ft.Page):
                                             ft.Text(text_align= ft.TextAlign.CENTER,
                                                 spans=[
                                                     ft.TextSpan("OPTIGY",
-                                                        ft.TextStyle(font_family="arial",letter_spacing= 10,size=25, weight=ft.FontWeight.W_600,color=ft.colors.WHITE,),
+                                                        ft.TextStyle(font_family="arial",letter_spacing= 8,size=20, weight=ft.FontWeight.W_600,color=ft.colors.WHITE,),
                                                     ),
                                                 ],
                                             ),      
@@ -123,7 +124,7 @@ def main(page: ft.Page):
                         content=ft.Text(text_align= ft.TextAlign.CENTER,
                             spans=[
                                 ft.TextSpan("Cuida y optimiza tu enegía!",
-                                    ft.TextStyle(font_family="arial",size=20, weight=ft.FontWeight.W_700,color=ft.colors.GREY_900,),
+                                    ft.TextStyle(font_family="arial",size=16, weight=ft.FontWeight.W_700,color=ft.colors.GREY_900,),
                                 ),
                             ],
                         ),
@@ -131,15 +132,18 @@ def main(page: ft.Page):
 
                     ft.Container(
                         width=general_weight,
-                        height=300,
+                        height=250,
+                        padding=2,
+                        margin=5,
                         alignment=alignment.center,
-                        bgcolor=ft.colors.GREY_700,
+                        bgcolor=ft.colors.TRANSPARENT,
                         content= ft.Column([
                             ft.Container(
                                     width=general_weight,
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
-                                    bgcolor=ft.colors.BLUE_400,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
                                     margin=5,
                                     content=ft.Text("Casa 0",text_align=ft.TextAlign.CENTER)
                             ),
@@ -147,7 +151,8 @@ def main(page: ft.Page):
                                     width=general_weight,
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
-                                    bgcolor=ft.colors.BLUE_400,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
                                     margin=5,
                                     content=ft.Text("Casa 1",text_align=ft.TextAlign.CENTER)
                             ),
@@ -156,7 +161,8 @@ def main(page: ft.Page):
                                     width=general_weight,
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
-                                    bgcolor=ft.colors.BLUE_400,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
                                     margin=5,
                                     content=ft.Text("Casa 2",text_align=ft.TextAlign.CENTER)
                             ),
@@ -165,7 +171,8 @@ def main(page: ft.Page):
                                     width=general_weight,
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
-                                    bgcolor=ft.colors.BLUE_400,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
                                     margin=5,
                                     content=ft.Text("Casa 3",text_align=ft.TextAlign.CENTER)
                             ),
@@ -180,9 +187,10 @@ def main(page: ft.Page):
                     ft.Container(
                         width=general_weight,
                         alignment=alignment.center,
+                        margin=5,
                         content=
-                        ft.Container(width=90,
-                                height=90,
+                        ft.Container(width=80,
+                                height=80,
                                 gradient=ft.LinearGradient(
                                         begin=ft.alignment.top_center,
                                         end=ft.Alignment(0.8, 1),
@@ -212,6 +220,24 @@ def main(page: ft.Page):
                                 content= ft.FloatingActionButton(icon=ft.icons.ADD, bgcolor=ft.colors.TRANSPARENT, autofocus=True, on_click=lambda _: page.go("/store")),
                             ),
                     ),
+
+                    ft.Container(
+                        width=general_weight,
+                        alignment=alignment.center,
+                        margin=5,
+                        content=ft.Container(width=general_weight,
+                                height=50,
+                                border_radius=12,
+                                border= ft.border.all(1, ft.colors.BLACK38),
+                                content= ft.FloatingActionButton(content=ft.Container(margin=4, padding=4,content=ft.Row([ft.Image(width=35, src="assets/logos/LampIcon.png"), ft.Text("Aquí irán los Tips de eficiencia energética.", size=12,text_align=ft.TextAlign.CENTER)])), bgcolor=ft.colors.TRANSPARENT, autofocus=True, on_click=lambda _: page.go("/store")),
+                            ),
+                    ),
+
+                    ft.Container(
+                        width=general_weight,
+                        alignment=alignment.center,
+                        content=ft.Text("Optigyº todos los derechos reservados.",weight=ft.FontWeight.W_800,font_family="arial", size=13,color=ft.colors.BLACK,text_align=ft.TextAlign.CENTER),
+                    )
                 ],
                 alignment= ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.MainAxisAlignment.CENTER),
             ], alignment= ft.MainAxisAlignment.CENTER,vertical_alignment=ft.CrossAxisAlignment.CENTER,
