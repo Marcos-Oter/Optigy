@@ -2,12 +2,16 @@ import flet as ft
 from flet import UserControl,alignment, Page
 from pages.index import _view_ as optigyHome
 from pages.about import _view_ as optigyAbout
+from datetime import datetime
+import sqlite3
 
-def main(page: Page):
+async def main(page: Page):
+
     page.title = "Optigy"
 
     page.window_resizable = True
     page.vertical_alignment = "center"
+    page.horizontal_alignment = "center"
     page.theme_mode = ft.ThemeMode.DARK
 
     page.scroll = ft.ScrollMode.ADAPTIVE
