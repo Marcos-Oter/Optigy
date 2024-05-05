@@ -1,6 +1,6 @@
-from flet import View, Column, Container, Text, FilledButton, alignment, page, Page
+from flet import View, Column, Container, Text, ElevatedButton, FilledButton, alignment, page, Page
 import flet as ft
-import math
+import math 
 
 #Color de fondo de la APP
 
@@ -10,7 +10,6 @@ profiles_containers_border = 12
 profiles_containers_bgcolor = ft.colors.WHITE
 
 def _view_():
-
     return View("/index", bgcolor=ft.colors.GREY_400,
                 controls=[
                     Column(
@@ -187,7 +186,7 @@ ft.Row(
                                 #theme= ft.Theme(color_scheme=ft.ColorScheme(primary=ft.colors.GREEN)),
                                 border_radius=20,
                                 #border= ft.border.all(1, ft.colors.BLUE),
-                                content= ft.FloatingActionButton(icon=ft.icons.ADD, bgcolor=ft.colors.TRANSPARENT, autofocus=True, on_click=lambda _: page.go("/about")),
+                                content= ft.FloatingActionButton(icon=ft.icons.ADD, bgcolor=ft.colors.TRANSPARENT, autofocus=True, on_click=lambda e: e.page.go("/about")),
                             ),
                     ),
 
@@ -199,7 +198,7 @@ ft.Row(
                                 height=50,
                                 border_radius=12,
                                 border= ft.border.all(1, ft.colors.BLACK38),
-                                content= ft.FloatingActionButton(content=ft.Container(margin=4, padding=4,content=ft.Row([ft.Image(width=35, src="assets/logos/LampIcon.png"), ft.Text("Aquí irán los Tips de eficiencia energética.", size=12,text_align=ft.TextAlign.CENTER)])), bgcolor=ft.colors.TRANSPARENT, autofocus=True, on_click=lambda _: page.go("/about")),
+                                content= ft.FloatingActionButton(content=ft.Container(margin=4, padding=4,content=ft.Row([ft.Image(width=35, src="assets/logos/LampIcon.png"), ft.Text("Aquí irán los Tips de eficiencia energética.", size=12,text_align=ft.TextAlign.CENTER)])), bgcolor=ft.colors.TRANSPARENT, autofocus=True, on_click=lambda e: e.page.go("/about")),
                             ),
                     ),
 
