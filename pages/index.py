@@ -9,6 +9,11 @@ profiles_containers_height = 190
 profiles_containers_border = 12
 profiles_containers_bgcolor = ft.colors.WHITE
 
+greens_gradients = ["#3fe39f","#3fe39f","#3fe39f","#3fe39f","#3fe39f","#3dc7a5","#3dc7a5","#3dc7a5"]
+grey_gradients = ["#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#A6ACAF","#A6ACAF","#A6ACAF"]
+
+home_icon_size = 85
+
 def _view_():
     return View("/index", bgcolor=ft.colors.GREY_400,
                 controls=[
@@ -28,16 +33,7 @@ ft.Row(
                                 gradient=ft.LinearGradient(
                                         begin=ft.alignment.top_center,
                                         end=ft.Alignment(0.8, 1),
-                                        colors=[
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3dc7a5",
-                                            "#3dc7a5",
-                                            "#3dc7a5",
-                                        ],
+                                        colors=greens_gradients,
                                         tile_mode=ft.GradientTileMode.MIRROR,
                                         rotation=math.pi / 3,
                                     ),
@@ -109,41 +105,60 @@ ft.Row(
                         content= ft.Column([
                             ft.Container(
                                     width=general_weight,
+                                    gradient=ft.LinearGradient(
+                                        begin=ft.alignment.top_center,
+                                        end=ft.Alignment(0.8, 1),
+                                        colors=grey_gradients),
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
                                     border_radius=profiles_containers_border,
                                     bgcolor=profiles_containers_bgcolor,
                                     margin=5,
-                                    content=ft.Text("Casa 1",text_align=ft.TextAlign.CENTER)
-                            ),
+                                    content= ft.Row([ft.Column([ft.Image(width=home_icon_size, src="assets/logos/home-icon.png"), ft.Text("Casa 1",text_align=ft.TextAlign.CENTER, size=16, weight=ft.FontWeight.W_700,color=ft.colors.GREY_900)],alignment=ft.MainAxisAlignment.CENTER)
+                        ],alignment=ft.MainAxisAlignment.CENTER)),
                             ft.Container(
                                     width=general_weight,
+                                    gradient=ft.LinearGradient(
+                                        begin=ft.alignment.top_center,
+                                        end=ft.Alignment(0.8, 1),
+                                        colors=grey_gradients),
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
                                     border_radius=profiles_containers_border,
                                     bgcolor=profiles_containers_bgcolor,
                                     margin=5,
-                                    content=ft.Text("Casa 2",text_align=ft.TextAlign.CENTER)
+                                    content= ft.Row([ft.Column([ft.Image(width=home_icon_size, src="assets/logos/home-icon.png"), ft.Text("Casa 2",text_align=ft.TextAlign.CENTER, size=16, weight=ft.FontWeight.W_700,color=ft.colors.GREY_900)],alignment=ft.MainAxisAlignment.CENTER)
+                        ],alignment=ft.MainAxisAlignment.CENTER)
                             ),
 
                                     ft.Container(
                                     width=general_weight,
+                                    gradient=ft.LinearGradient(
+                                        begin=ft.alignment.top_center,
+                                        end=ft.Alignment(0.8, 1),
+                                        colors=grey_gradients),
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
                                     border_radius=profiles_containers_border,
                                     bgcolor=profiles_containers_bgcolor,
                                     margin=5,
-                                    content=ft.Text("Casa 3",text_align=ft.TextAlign.CENTER)
+                                    content= ft.Row([ft.Column([ft.Image(width=home_icon_size, src="assets/logos/home-icon.png"), ft.Text("Casa 3",text_align=ft.TextAlign.CENTER, size=16, weight=ft.FontWeight.W_700,color=ft.colors.GREY_900)],alignment=ft.MainAxisAlignment.CENTER)
+                        ],alignment=ft.MainAxisAlignment.CENTER)
                             ),
 
                                     ft.Container(
                                     width=general_weight,
+                                    gradient=ft.LinearGradient(
+                                        begin=ft.alignment.top_center,
+                                        end=ft.Alignment(0.8, 1),
+                                        colors=grey_gradients),
                                     height=profiles_containers_height,
                                     alignment=alignment.center,
                                     border_radius=profiles_containers_border,
                                     bgcolor=profiles_containers_bgcolor,
                                     margin=5,
-                                    content=ft.Text("Casa 4",text_align=ft.TextAlign.CENTER)
+                                    content= ft.Row([ft.Column([ft.Image(width=home_icon_size, src="assets/logos/home-icon.png"), ft.Text("Casa 4",text_align=ft.TextAlign.CENTER, size=16, weight=ft.FontWeight.W_700,color=ft.colors.GREY_900)],alignment=ft.MainAxisAlignment.CENTER)
+                        ],alignment=ft.MainAxisAlignment.CENTER)
                             ),
                         ],
                             spacing=10,
@@ -163,16 +178,7 @@ ft.Row(
                                 gradient=ft.LinearGradient(
                                         begin=ft.alignment.top_center,
                                         end=ft.Alignment(0.8, 1),
-                                        colors=[
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3fe39f",
-                                            "#3dc7a5",
-                                            "#3dc7a5",
-                                            "#3dc7a5",
-                                        ],
+                                        colors=greens_gradients,
                                         tile_mode=ft.GradientTileMode.MIRROR,
                                         rotation=math.pi / 3,
                                     ),
