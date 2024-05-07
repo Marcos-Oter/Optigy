@@ -1,11 +1,12 @@
 import flet as ft
-from flet import UserControl,alignment, Page
-from pages.index import _view_ as optigyHome
-from pages.about import _view_ as optigyAbout
+from flet import UserControl,alignment, page, Page
+from index import _view_ as optigyHome
+from about import _view_ as optigyAbout
 from datetime import datetime
 import sqlite3
 
-async def main(page: Page):
+
+async def mainPage(page: Page):
 
     page.title = "Optigy"
 
@@ -44,6 +45,6 @@ async def main(page: Page):
     page.views.append(about)
     page.views.append(index)
     page.update()
-
+    
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.app(target=mainPage)
