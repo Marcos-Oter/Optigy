@@ -1,7 +1,8 @@
 import flet as ft
 from flet import UserControl,alignment, page, Page
 from index import _view_ as optigyHome
-from about import _view_ as optigyAbout
+from tips import _view_ as optigyTips
+from profile_general_view import _view_ as optigyProfile
 from datetime import datetime
 import sqlite3
 
@@ -10,22 +11,28 @@ async def mainPage(page: Page):
 
     page.title = "Optigy"
 
-    page.window_resizable = True
+    #page.window_resizable = True
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"
+    #page.window_opacity = .5
+
     page.theme_mode = ft.ThemeMode.DARK
 
-    page.scroll = ft.ScrollMode.ADAPTIVE
+    #page.scroll = ft.ScrollMode.ADAPTIVE
     page.bgcolor = ft.colors.GREY_400
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
     index = optigyHome()
-    about = optigyAbout()
+    tips = optigyTips()
+    general = optigyProfile()
 
     def route_change(route):
         page.views.clear()
-        if page.route == "/about":
-            page.views.append(about)
+        
+        if page.route == "/general":
+            page.views.append(general)
+
+        if page.route == "/tips":
+            page.views.append(tips)
         
         if page.route == "/index":
             page.views.append(index)
@@ -42,7 +49,8 @@ async def mainPage(page: Page):
     page.on_view_pop = view_pop
     page.go(page.route)
 
-    page.views.append(about)
+    page.views.append(tips)
+    page.views.append(general)
     page.views.append(index)
     page.update()
     
