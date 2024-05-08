@@ -10,15 +10,9 @@ import sqlite3
 async def mainPage(page: Page):
 
     page.title = "Optigy"
-
-    #page.window_resizable = True
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"
-    #page.window_opacity = .5
-
     page.theme_mode = ft.ThemeMode.DARK
-
-    #page.scroll = ft.ScrollMode.ADAPTIVE
     page.bgcolor = ft.colors.GREY_400
 
     index = optigyHome()

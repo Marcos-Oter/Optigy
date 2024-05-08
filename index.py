@@ -1,8 +1,6 @@
-from flet import View, Column, Container, Text, ElevatedButton, FilledButton, alignment,page , Page
+from flet import View, Column, Container, Text, ElevatedButton, FilledButton, alignment, page, Page
 import flet as ft
 import math
-
-#Color de fondo de la APP
 
 general_width= 325
 profiles_containers_height = 190
@@ -140,7 +138,59 @@ _main_column_ = ft.Column(
                                 ),
                             ],
                         ),
+ft.Container(
+                        width=general_width,
+                        height=250,
+                        padding=2,
+                        #margin=5,
+                        alignment=alignment.center,
+                        bgcolor=ft.colors.TRANSPARENT,
+                        content= ft.Column([
+                            ft.Container(
+                                    width=general_width,
+                                    height=profiles_containers_height,
+                                    alignment=alignment.center,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
+                                    margin=5,
+                                    content=ft.Text("Casa 1",text_align=ft.TextAlign.CENTER)
+                            ),
+                            ft.Container(
+                                    width=general_width,
+                                    height=profiles_containers_height,
+                                    alignment=alignment.center,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
+                                    margin=5,
+                                    content=ft.Text("Casa 2",text_align=ft.TextAlign.CENTER)
+                            ),
 
+                                    ft.Container(
+                                    width=general_width,
+                                    height=profiles_containers_height,
+                                    alignment=alignment.center,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
+                                    margin=5,
+                                    content=ft.Text("Casa 3",text_align=ft.TextAlign.CENTER)
+                            ),
+
+                                    ft.Container(
+                                    width=general_width,
+                                    height=profiles_containers_height,
+                                    alignment=alignment.center,
+                                    border_radius=profiles_containers_border,
+                                    bgcolor=profiles_containers_bgcolor,
+                                    margin=5,
+                                    content=ft.Text("Casa 4",text_align=ft.TextAlign.CENTER)
+                            ),
+                        ],
+                            spacing=10,
+                            height=200,
+                            width=float("inf"),
+                            scroll=ft.ScrollMode.ALWAYS,
+                        ),
+                    ),
                     
                             ft.Container(width=general_width,
                                     height=50,
