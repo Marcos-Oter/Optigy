@@ -1,12 +1,9 @@
 import flet as ft
-from flet import UserControl,alignment, page, Page
 from index import _view_ as optigyHome
 from tips import _view_ as optigyTips
 from profile_general_view import _view_ as optigyProfile
-from datetime import datetime
 
-async def mainPage(page: Page):
-
+async def mainPage(page: ft.Page):
     page.title = "Optigy"
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"

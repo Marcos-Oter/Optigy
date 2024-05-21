@@ -1,16 +1,11 @@
-from flet import View, Column, Container, Text, ElevatedButton, FilledButton, alignment, page, Page
 import flet as ft
-import math
 
 general_width= 270
 profiles_containers_height = 160
 profiles_containers_border = 12
-profiles_containers_bgcolor = ft.colors.WHITE
-
 dark_color_items = ft.colors.GREY_900
 
 greens_gradients = ["#3FBB9D","#3dc7a5","#3dc7a5","#3dc7a5","#3dc7a5","#39D59A","#3fe39f","#3fe39f","#3fe39f", "#32FAA7"]
-
 grey_gradients = ["#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#A6ACAF","#A6ACAF","#A6ACAF"]
 
 bg_grey_gradients = [ft.colors.GREY_600, ft.colors.GREY_500,ft.colors.GREY_300, ft.colors.GREY_300, ft.colors.GREY_300, ft.colors.GREY_300, ft.colors.GREY_300]
@@ -203,14 +198,14 @@ class form(ft.UserControl):
     
 
 def _view_():
-        return View("/index", bgcolor=ft.colors.GREY_400,
+        return ft.View("/index", bgcolor=ft.colors.GREY_400,
                     controls=[
                         ft.Container
                         (
                             width=1500,
                             height=700,
                             margin=-10,
-                            alignment=alignment.center,
+                            alignment=ft.alignment.center,
                             #bgcolor="bluegrey900",
                             gradient=ft.LinearGradient(begin=ft.alignment.top_center,end=ft.alignment.bottom_center,colors=bg_grey_gradients),
                             content=form()                       
