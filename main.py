@@ -1,14 +1,14 @@
-import flet as ft
+from flet import Page, app, colors, ThemeMode
 from index import _view_ as optigyHome
 from tips import _view_ as optigyTips
 from profile_general_view import _view_ as optigyProfile
 
-async def mainPage(page: ft.Page):
+async def mainPage(page: Page):
     page.title = "Optigy"
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"
-    page.theme_mode = ft.ThemeMode.DARK
-    page.bgcolor = ft.colors.GREY_400
+    page.theme_mode = ThemeMode.DARK
+    page.bgcolor = colors.GREY_400
 
     index = optigyHome()
     tips = optigyTips()
@@ -44,4 +44,4 @@ async def mainPage(page: ft.Page):
     page.update()
     
 if __name__ == "__main__":
-    ft.app(target=mainPage)
+    app(target=mainPage)
