@@ -4,8 +4,6 @@ from index import _view_ as optigyHome
 from tips import _view_ as optigyTips
 from profile_general_view import _view_ as optigyProfile
 from datetime import datetime
-import sqlite3
-
 
 async def mainPage(page: Page):
 
