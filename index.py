@@ -3,7 +3,6 @@ import flet as ft
 general_width= 270
 profiles_containers_height = 160
 profiles_containers_border = 12
-dark_color_items = ft.colors.GREY_900
 
 greens_gradients = ["#3FBB9D","#3dc7a5","#3dc7a5","#3dc7a5","#3dc7a5","#39D59A","#3fe39f","#3fe39f","#3fe39f", "#32FAA7"]
 grey_gradients = ["#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#A6ACAF","#A6ACAF","#A6ACAF"]
@@ -11,7 +10,6 @@ grey_gradients = ["#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#E5E7E9","#A6ACAF","#
 bg_grey_gradients = [ft.colors.GREY_600, ft.colors.GREY_500,ft.colors.GREY_300, ft.colors.GREY_300, ft.colors.GREY_300, ft.colors.GREY_300, ft.colors.GREY_300]
 bg2_grey_gradients = [ft.colors.GREY_500,ft.colors.GREY_400, ft.colors.GREY_200, ft.colors.GREY_200, ft.colors.GREY_200]
 
-home_icon_size = 85
 
 class form(ft.UserControl):
     def __init__(self):
@@ -50,7 +48,7 @@ class form(ft.UserControl):
                                                         ft.TextSpan("OPTIGY", 
                                                             ft.TextStyle(font_family="arial", letter_spacing= 7, size=19, weight=ft.FontWeight.W_600,
                                                                         foreground=ft.Paint(
-                                                                        color=dark_color_items,
+                                                                        color=ft.colors.GREY_900,
                                                                         stroke_width=4,
                                                                         stroke_join=ft.StrokeJoin.ROUND,
                                                                         style=ft.PaintingStyle.STROKE,
@@ -67,13 +65,12 @@ class form(ft.UserControl):
                                                                 ],
                                                         ),      
                                                     ]
-                                            
                                 ),
                                 #SUBTITLE
                                 ft.Text(text_align= ft.TextAlign.CENTER,
                                         spans=[
                                             ft.TextSpan("Cuida y optimiza tu enegía!",
-                                            ft.TextStyle(font_family="arial",size=15, weight=ft.FontWeight.W_700,color=dark_color_items,),
+                                            ft.TextStyle(font_family="arial",size=15, weight=ft.FontWeight.W_700,color=ft.colors.GREY_900),
                                             ),
                                         ],
                                     ),
@@ -87,13 +84,10 @@ class form(ft.UserControl):
                 self.form.height = 320
                 self.form.opacity = 100
                 self.form.disabled=False
-                self.form.update()
                 self.button.visible=False
-                self.button.update()
                 self.footer.visible=False
-                self.footer.update()
                 self.main.visible=False
-                self.main.update()
+                self.content.update()
                 
 
         def CancelCreateAPerfil(e):
@@ -101,20 +95,14 @@ class form(ft.UserControl):
                 self.form.height = 0
                 self.form.opacity = 0
                 self.form.disabled=True
-                self.form.update()
                 self.button.visible=True
-                self.button.update()
                 self.footer.visible=True
-                self.footer.update()
                 self.main.visible=True
-                self.main.update()
+                self.content.update()
                 
         self.form = ft.Container(
                                 width=general_width,
                                 height=0,
-                                #col=4,
-                                #adaptive=True,
-                                #expand=True,
                                 bgcolor="#3fe39f",
                                 border_radius=40,
                                 opacity=1,
@@ -128,7 +116,7 @@ class form(ft.UserControl):
                                 alignment= ft.MainAxisAlignment.CENTER,
                                     controls=
                                     [
-                                        ft.Text("Cree un nuevo perfil", text_align= ft.TextAlign.CENTER, color=dark_color_items),
+                                        ft.Text("Cree un nuevo perfil", text_align= ft.TextAlign.CENTER, color=ft.colors.GREY_900),
                                         self.name,
                                         self.type,
                                         ft.Container(
@@ -151,7 +139,7 @@ class form(ft.UserControl):
                                         border_radius=5,
                                         height= profiles_containers_height,
                                         gradient= ft.LinearGradient(begin=ft.alignment.top_center,end=ft.alignment.bottom_center,colors=bg2_grey_gradients),
-                                        columns=[ft.Text("No hay perfil.",size=12,color=dark_color_items)],
+                                        
                                 )
                             ]       
         )
@@ -206,7 +194,6 @@ def _view_():
                             height=700,
                             margin=-10,
                             alignment=ft.alignment.center,
-                            #bgcolor="bluegrey900",
                             gradient=ft.LinearGradient(begin=ft.alignment.top_center,end=ft.alignment.bottom_center,colors=bg_grey_gradients),
                             content=form()                       
                         )
