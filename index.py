@@ -91,9 +91,9 @@ class form(ft.UserControl):
                 
 
         def CancelCreateAPerfil(e):
-            if self.form.height != 0:
-                self.form.height = 0
-                self.form.opacity = 0
+            if self.form.height != 1:
+                self.form.height = 1
+                self.form.opacity = 1
                 self.form.disabled=True
                 self.button.visible=True
                 self.footer.visible=True
@@ -102,7 +102,7 @@ class form(ft.UserControl):
                 
         self.form = ft.Container(
                                 width=general_width,
-                                height=0,
+                                height=1,
                                 bgcolor="#3fe39f",
                                 border_radius=40,
                                 opacity=1,
