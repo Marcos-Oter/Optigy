@@ -38,11 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
 VIRTUAL_ENV="C:\Users\Sr\Desktop\Optigy\.venv"
-=======
-VIRTUAL_ENV="C:\Users\Marcos\Desktop\Optigy\.venv"
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

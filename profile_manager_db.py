@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import sqlite3
 
 class ProfileManager:
@@ -147,16 +146,3 @@ class ProfileManager:
             query = '''UPDATE habitacion SET CONSUMO_H =? WHERE H_ID =?'''
             self.connection.execute(query, (consumition, h_id))
             self.connection.commit()
-=======
-'''import sqlite3
-
-class ProfileManager:
-    def __init__(self) -> None:
-        self.connection = sqlite3.connect("data.db", check_same_thread= False)
-
-    def add_Profile(self, id, name, type):
-        query = """ INSERT INTO datos (ID, NOMBRE, TIPO)
-                    VALUES (?,?,?)
-                """
-        self.connection()'''
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643

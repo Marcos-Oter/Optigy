@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import flet as ft
 from __module__ import bg_grey_gradients,bg_white_gradients,back_button, general_width, bg2_grey_gradients, profiles_containers_height, view_template
 
@@ -124,13 +123,3 @@ def _view_():
                         )
                     ]       
                 )
-=======
-from flet import View, Text, ElevatedButton, colors, AppBar
-def _view_():
-    return View("/tips", bgcolor=colors.GREY_400,
-                controls=[
-                    AppBar(title=Text("Tips"), bgcolor=colors.SURFACE_VARIANT),
-                    ElevatedButton("Go Home", on_click=lambda e: e.page.go("/index")),
-                ]
-            )
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643

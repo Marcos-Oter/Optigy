@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!C:\Users\Sr\Desktop\Optigy\.venv\Scripts\python.exe
-=======
-#!C:\Users\Marcos\Desktop\Optigy\.venv\Scripts\python.exe
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
 
 # pipdither
 # Error Diffusing image dithering.

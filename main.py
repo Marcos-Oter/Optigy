@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import flet as ft
 from index import _view_ as optigyHome
 from profile_general_view import _view_ as optigyProfile
@@ -8,15 +7,6 @@ from settings_view import _view_ as optigySettings
 
 def mainPage(page: ft.Page):
     
-=======
-#from flet import Page, app, colors, ThemeMode
-import flet as ft
-from index import _view_ as optigyHome
-from tips import _view_ as optigyTips
-from profile_general_view import _view_ as optigyProfile
-
-def mainPage(page: ft.Page):
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
     page.title = "Optigy"
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"
@@ -24,7 +14,6 @@ def mainPage(page: ft.Page):
     page.bgcolor = ft.colors.GREY_400
 
     index = optigyHome()
-<<<<<<< HEAD
     general = optigyProfile()
     tips = optigyTips()
     rooms = optigyRooms()
@@ -40,13 +29,6 @@ def mainPage(page: ft.Page):
         
         if page.route == "/rooms":
             page.views.append(rooms)
-=======
-    tips = optigyTips()
-    general = optigyProfile()
-
-    def route_change(route):
-        page.views.clear()
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
         
         if page.route == "/general":
             page.views.append(general)
@@ -57,13 +39,8 @@ def mainPage(page: ft.Page):
         if page.route == "/index":
             page.views.append(index)
 
-<<<<<<< HEAD
         page.update()
     
-=======
-        page.route = "/index"
-        page.update()
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
 
     def view_pop(view):
         page.views.pop()
@@ -74,19 +51,12 @@ def mainPage(page: ft.Page):
     page.on_view_pop = view_pop
     page.go(page.route)
 
-<<<<<<< HEAD
     page.views.append(settings)
     page.views.append(rooms)
-=======
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
     page.views.append(tips)
     page.views.append(general)
     page.views.append(index)
     page.update()
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
 if __name__ == "__main__":
     ft.app(target=mainPage)
