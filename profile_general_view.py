@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import flet as ft
 from __module__ import delete_room_display, bg_white_gradients, bg_grey_gradients, dinamic_tips_bar, edit_form, back_button, get_all_rooms_consumtion, show_rooms, data_base, data_table, general_data_table, general_rooms_table, profiles_containers_height, general_width, greens_gradients
 import time
@@ -205,3 +206,14 @@ def _view_():
                         )
                     ]       
                 )
+=======
+from flet import View, Text, ElevatedButton, colors, AppBar
+
+def _view_():
+    return View("/general", bgcolor=colors.GREY_400,
+                controls=[
+                    AppBar(title=Text("Profile"), bgcolor=colors.SURFACE_VARIANT),
+                    ElevatedButton("Go Home", on_click=lambda e: e.page.go("/index")),
+                ]
+            )
+>>>>>>> a8bdfc93c1a9388b0fc3baed18ffd87274c70643
